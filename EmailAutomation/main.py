@@ -6,6 +6,7 @@ import pyttsx3
 from email.message import EmailMessage
 
 listener = sr.Recognizer()
+listener.energy_threshold=2000
 engine = pyttsx3.init()
 
 
