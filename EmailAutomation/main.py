@@ -6,7 +6,6 @@ import pyttsx3
 from email.message import EmailMessage
 import imaplib
 import email
-import webbrowser
 # Creating an Instance of Recognizing Voice
 listener = sr.Recognizer()
 # Decreasing Mic Sensitivity to make it undersand clearer
@@ -119,8 +118,14 @@ def get_mail(con):
 def mainFile():
     talk("Please enter your name")
     Name=input("Enter your name here")
-    text="Hello {}. Let's check your unread mail".format(Name)
-    talk(text)
-    get_mail(con)
+    talk("Do you want to check your last mail in inbox or send a mail to someone?")
+    talk("Reply with First to check inbox and second to send mail")
+    reply= get_info()
+    if "First" in reply:
+        text="Hello {}. Let's check your unread mail".format(Name)
+        talk(text)
+        get_mail(con)
+    else:
+        get_Email_Info()
 
 mainFile()
