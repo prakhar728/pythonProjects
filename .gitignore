@@ -1,3 +1,4 @@
 *.env
 *.pdf
 .vscode
+/CP BOT

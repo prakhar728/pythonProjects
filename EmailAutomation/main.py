@@ -50,6 +50,7 @@ def get_info():
 
 
 
+
 # Send the mail to with the parameters entered by the User
 def sendEmail(reciever, subject, text):
     server = smtplib.SMTP("smtp.gmail.com", 587)
